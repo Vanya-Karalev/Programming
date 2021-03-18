@@ -1,0 +1,4 @@
+﻿  Source.c
+D:\C++ C C#\С\LR 2. Number 2\LR 2. Number 2\Source.c(13,21): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\C++ C C#\С\LR 2. Number 2\LR 2. Number 2\Source.c(20,31): warning C4013: foundN: нет определения; предполагается "extern" с возвратом типа "int"
+  LR 2. Number 2.vcxproj -> D:\C++ C C#\С\LR 2. Number 2\Debug\LR 2. Number 2.exe
