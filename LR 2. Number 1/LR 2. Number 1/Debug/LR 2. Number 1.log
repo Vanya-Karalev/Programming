@@ -1,0 +1,13 @@
+﻿  main.c
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(39,23): warning C4013: system: нет определения; предполагается "extern" с возвратом типа "int"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(45,35): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(56,39): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(73,39): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(84,43): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(109,39): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(120,43): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(149,39): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(160,43): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(185,39): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+D:\C++ C C#\C\LR 2. Number 1\LR 2. Number 1\main.c(196,43): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+  LR 2. Number 1.vcxproj -> D:\C++ C C#\C\LR 2. Number 1\Debug\LR 2. Number 1.exe
