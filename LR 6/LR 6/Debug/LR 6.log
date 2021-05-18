@@ -1,0 +1,5 @@
+﻿  main.c
+D:\C++ C C#\C\LR 6\LR 6\main.c(126,7): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+D:\C++ C C#\C\LR 6\LR 6\main.c(126,12): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+D:\C++ C C#\C\LR 6\LR 6\main.c(132,27): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+  LR 6.vcxproj -> D:\C++ C C#\C\LR 6\Debug\LR 6.exe
