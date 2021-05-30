@@ -1,139 +1,139 @@
-Name: Bondarkov Daniil
+Name: Aralin Igor
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Burakov Dmitry
+Name: Lazuk Ilya
 ScholarShip: 126.179000
 Average score: 9.800000
 Social allowance: 0
 Number of petitions: 0
-Name: Burko Liana
+Name: Krupenich Egor
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Volkovsky Oleg
+Name: Shargorodsky Ignat
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Vorobei Elena
+Name: Makatrov Anton
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Gavrilik Artyom
+Name: Gotchenya Dmitry
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 1
 Number of petitions: 0
-Name: Goncharov Mikhail
+Name: Matsur Arthur
 ScholarShip: 94.634000
 Average score: 7.800000
 Social allowance: 5
 Number of petitions: 0
-Name: Grigorchuk Mikhail
+Name: Gerasimenok Dmitry
 ScholarShip: 181.000000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 1
-Name: Grishilov Vlad
+Name: Vashkevich Nikolay
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Gutorov Pasha
+Name: Smoglyuk Dmitry
 ScholarShip: 94.634000
 Average score: 7.700000
 Social allowance: 1
 Number of petitions: 0
-Name: Dembovsky Artem
+Name: Yuryev Vadim
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Ermolaev Nikita
+Name: Fedorchuk Valeria
 ScholarShip: 110.405000
 Average score: 8.200000
 Social allowance: 0
 Number of petitions: 0
-Name: Kozlov Vadim
+Name: Selkhanovich Maxim
 ScholarShip: 181.000000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 1
-Name: Kononovich Stas
+Name: Svetushkov Ivan
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 1
 Number of petitions: 0
-Name: Krivetsky Roman
+Name: Sachivko Nikita
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Krishtafovich Karina
+Name: Ranyuk Maria
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Lazarev Dmitry
+Name: Pronin Ilya
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Magazinnikova Sofia
+Name: Polyakov Kirill
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Savchuk Maxim
+Name: Orlovsky Ivan
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Sidorko Veronica
+Name: Kravchenko Maria
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Simakov Egor
+Name: Ermakov Anton
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Slutsky Nikita
+Name: Dovgun Victoria
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Sokolyuk Danila
+Name: Gromyko Eugene
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Solyanik Anton
+Name: Golovko Daria
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Ulasevich Artyom
+Name: Volodkov Savely
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Shlypo Elizabeth
+Name: Vasilevsky Sergey
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Shcherbaty Alexey
+Name: Kozachenko Stanislav
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
 Number of petitions: 0
-Name: Shurko Tanusha
+Name: Karalev Ivan
 ScholarShip: 181.000000
 Average score: 8.787600
 Social allowance: 1
