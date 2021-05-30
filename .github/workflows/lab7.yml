@@ -14,9 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make lab7
-      working-directory: ./Lab7C/Lab7C
+      working-directory: ./Lab7C
       run: |
         make Test
         ./Test
-        gcov pawnshop.cpp test.cpp -r
+        gcov Test.c -r
         bash <(curl -s https://codecov.io/bash)
