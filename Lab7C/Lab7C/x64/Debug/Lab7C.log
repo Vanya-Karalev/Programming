@@ -1,0 +1,3 @@
+﻿  Source.c
+D:\C++ C C#\C\Labs-C-main\Lab7C\Lab7C\Source.c(311,8): warning C4013: exit: нет определения; предполагается "extern" с возвратом типа "int"
+  Lab7C.vcxproj -> D:\C++ C C#\C\Labs-C-main\Lab7C\x64\Debug\Lab7C.exe
