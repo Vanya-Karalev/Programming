@@ -1,4 +1,4 @@
-Name: Bondarkov Daniil
+Name: Aralin Igor
 ScholarShip: 126.179000
 Average score: 10.000000
 Social allowance: 0
