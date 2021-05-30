@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make lab7
-      working-directory: ./LR 7/LR 7
+      working-directory: ./Lab7C/Lab7C
       run: |
         make Test
         ./Test
