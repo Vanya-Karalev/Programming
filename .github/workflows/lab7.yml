@@ -13,10 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: make lab
-      working-directory: ./Lab7C/Lab7C
-      run: |
-        make Test
-        ./Test
-        gcov Test.c Source.c -r
-        bash <(curl -s https://codecov.io/bash)
+    - name: make
+      run: make -C Lab7C/Lab7C/
