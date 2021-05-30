@@ -81,8 +81,8 @@ void test1(char fileName[12]) {
 }
 
 #undef main
-//int main() {
-//	test("result.txt");
-//	test1("result1.txt");
-//	return 0;
-//}
+int main() {
+	test("result.txt");
+	test1("result1.txt");
+	return 0;
+}
