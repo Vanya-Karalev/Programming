@@ -1,0 +1,126 @@
+        -:    0:Source:Test.cpp
+        -:    0:Graph:Test.gcno
+        -:    0:Data:Test.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    0:Source is newer than graph
+        -:    1:﻿#include "main.h"
+        -:    2:
+        2:    3:/*void lineChek() {
+        2:    4:    fstream checkfile;
+        -:    5:    checkfile.open("Check.txt");
+        2:    6:    if (!checkfile.good())
+        -:    7:        fstream out("Check.txt");
+        -:    8:    //checkfile << line();
+        2:    9:
+        -:   10:    for (int i = 0; i < 50; i++)
+        -:   11:        checkfile << '*';
+        2:   12:
+        -:   13:    long file_size;
+        2:   14:    checkfile.seekg(0, ios::end);
+        4:   15:    file_size = checkfile.tellg();
+        2:   16:
+        4:   17:    printf("line check ");
+        2:   18:    if (file_size != 0)
+        -:   19:        printf("complited\n");
+        2:   20:    else
+        -:   21:        printf("failed\n");
+        -:   22:
+        2:   23:    checkfile.close();
+        -:   24:}*/
+        -:   25:
+        2:   26:void inputCheck() {
+        -:   27:    input();
+        2:   28:
+        4:   29:    printf("input check ");
+        2:   30:
+        2:   31:    if (true)
+    #####:   32:        printf("complited\n");
+        -:   33:    else
+    #####:   34:        printf("failed\n");
+    #####:   35:}
+    #####:   36:
+        -:   37:void AddInformationCheck() {
+        -:   38:    vector<Student> Students_list;
+        2:   39:    setlocale(LC_ALL, "Russian");
+        -:   40:    Student Mikle = { "Veromeev_Mikle_Sergeevich", "020604", 5.0, 25, "Платная" };
+        -:   41:    Students_list.push_back({ "Veromeev_Mikle_Sergeevich", "020604", 5.0, 25, "Платная" });
+        2:   42:
+        -:   43:    printf("AddInformation check ");
+        -:   44:
+        2:   45:    if (true)
+        -:   46:        printf("complited\n");
+        2:   47:    else
+        4:   48:        printf("failed\n");
+        2:   49:}
+    #####:   50:
+        -:   51:void ChangeInformationAboutStudentCheck() {
+    #####:   52:    vector<Student> Students_list;
+    #####:   53:    double averagescore = 5.3;
+        -:   54:    for (int i = 0; i < Students_list.size(); i++) {
+        -:   55:        if (Students_list[i].FIO == "Veromeev_Mikle_Sergeevich")
+        2:   56:        {
+        -:   57:            Students_list.push_back({ "Veromeev_Mikle_Sergeevich", "020604", averagescore, 25, "Платная" });
+        -:   58:            Students_list.erase(Students_list.begin() + i);
+        2:   59:            break;
+        -:   60:        }
+        -:   61:    }
+        2:   62:    printf("ChangeInformationAboutStudent check ");
+        -:   63:
+        2:   64:    if (true)
+        2:   65:        printf("complited\n");
+        -:   66:    else
+        2:   67:        printf("failed\n");
+        -:   68:}
+        -:   69:
+        2:   70:void OutputInformarionFromAllStudentsChek()
+        -:   71:{
+        -:   72:    OutputInformarionFromAllStudents();
+        2:   73:    printf("OutputInformarionFromAllStudents check ");
+        -:   74:
+        -:   75:    if (true)
+        -:   76:        printf("complited\n");
+        2:   77:    else
+        -:   78:        printf("failed\n");
+        2:   79:}
+        2:   80:
+        2:   81:void DeliteInformationCheck() {
+        2:   82:    vector<Student> Students_list;
+        2:   83:    for (int i = 0; i < Students_list.size(); i++) {
+        8:   84:        if (Students_list[i].FIO == "Veromeev_Mikle_Sergeevich")
+        -:   85:        {
+        -:   86:            Students_list.erase(Students_list.begin() + i);
+        -:   87:            break;
+        -:   88:        }
+        -:   89:    }
+        -:   90:    printf("DeliteInformation check ");
+        -:   91:
+        -:   92:    if (true)
+        -:   93:        printf("complited\n");
+        -:   94:    else
+        -:   95:        printf("failed\n");
+        -:   96:}
+        -:   97:
+        -:   98:void outputCheck() {
+        -:   99:    output();
+        -:  100:
+        -:  101:    printf("output check ");
+        -:  102:
+        -:  103:    if (true)
+        -:  104:        printf("complited\n");
+        -:  105:    else
+        -:  106:        printf("failed\n");
+        -:  107:}
+        -:  108:
+        -:  109:#undef main
+        -:  110:
+        -:  111:int main()
+        -:  112:{
+        -:  113:    //lineChek();
+        -:  114:    inputCheck();
+        -:  115:    AddInformationCheck();
+        -:  116:    ChangeInformationAboutStudentCheck();
+        -:  117:    OutputInformarionFromAllStudentsChek();
+        -:  118:    DeliteInformationCheck();
+        -:  119:    outputCheck();
+        -:  120:}

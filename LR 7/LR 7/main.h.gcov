@@ -1,0 +1,35 @@
+        -:    0:Source:main.h
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    0:Source is newer than graph
+        -:    1:#include <iostream>
+        -:    2:#include <fstream>
+        -:    3:#include <string>
+        -:    4:#include <vector>
+        -:    5:#include <regex>
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+    #####:    9:struct Student
+        -:   10:{
+        -:   11:    string FIO;
+        -:   12:    string GroupNumber;
+        -:   13:    double AverageScore;
+        -:   14:    int MissHourse;
+        -:   15:    string EducationForm;
+        -:   16:};
+        -:   17:
+        -:   18:void line();
+        -:   19:void OutputInformarion(Student& object);
+        -:   20:void OutputInformarionFromAllStudents();
+        -:   21:void DeliteInformation();
+        -:   22:void AddInformation();
+        -:   23:void output();
+        -:   24:void ChangeInformationAboutStudent();
+        -:   25:void ScholarshipCalculation();
+        -:   26:void input();
+        -:   27:void PrintStatement();
+        -:   28:void AwardPersonalScholarship();
+        -:   29:void UniversityCouncilScholarship();

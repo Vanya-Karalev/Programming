@@ -1,0 +1,507 @@
+        -:    0:Source:main.cpp
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    0:Source is newer than graph
+        -:    1:#include "main.h"
+        -:    2:
+        4:    3:vector<Student> Students_list;
+        -:    4:
+        -:    5:int ch = 0, cah = 0;
+        -:    6:
+    #####:    7://int main() {
+    #####:    8://    setlocale(LC_ALL, "Russian");
+    #####:    9://    system("chcp 1251");
+    #####:   10://    input();
+        -:   11://    int request;
+    #####:   12://    do {
+    #####:   13://        system("cls");
+    #####:   14://        cout << "Меню программы начисляющей стипендию\n";
+    #####:   15://        cout << "0: Вывести информацию о всех студенетах\n";
+    #####:   16://        cout << "1: Добавить информацию о студенете\n";
+    #####:   17://        cout << "2: Изменить средний балл студента\n";
+    #####:   18://        cout << "3: Удалить информацию о студенете\n";
+    #####:   19://        cout << "4: Начислить именную стипендию\n";
+    #####:   20://        cout << "5: Начислить Стипендию Совета вуза\n";
+    #####:   21://        cout << "6: Расчитать стипендию\n";
+    #####:   22://        cout << "7: Печать ведомости\n";
+    #####:   23://        cout << "8: Выход из программы\n";
+    #####:   24://        cin >> request;
+        -:   25://        while (true) {
+    #####:   26://            if (request < 0 || request > 8) {
+    #####:   27://                cout << "Повторите попытку ввода:\n(Можно вводить только цифры от 0 до 8)\n";
+    #####:   28://                cin >> request;
+        -:   29://            }
+        -:   30://            else
+        -:   31://                break;
+        -:   32://        }
+    #####:   33://        if (cin.fail()) {
+    #####:   34://            cout << "Программа завершена\n(Можно использовать только цифры)\n";
+    #####:   35://            return 0;
+        -:   36://        }
+    #####:   37://        switch (request)
+        -:   38://        {
+        -:   39://        case 0:
+    #####:   40://            cout << "Вывод информации о всех студенетах выполнен\n";
+    #####:   41://            OutputInformarionFromAllStudents();
+    #####:   42://            break;
+        -:   43://        case 1:
+    #####:   44://            cout << "Добавление информации о студенете\n";
+    #####:   45://            AddInformation();
+    #####:   46://            break;
+        -:   47://        case 2:
+    #####:   48://            cout << "Изменение среднего балла студента\n";
+    #####:   49://            ChangeInformationAboutStudent();
+    #####:   50://            break;
+        -:   51://        case 3:
+    #####:   52://            cout << "Удаление информации о студенете\n";
+    #####:   53://            DeliteInformation();
+    #####:   54://            break;
+        -:   55://        case 4:
+    #####:   56://            cout << "Начисление именной стипендии\n";
+    #####:   57://            AwardPersonalScholarship();
+    #####:   58://            break;
+        -:   59://        case 5:
+    #####:   60://            cout << "Начисление Стипендии Совета вуза\n";
+    #####:   61://            UniversityCouncilScholarship();
+    #####:   62://            break;
+        -:   63://        case 6:
+    #####:   64://            cout << "Расчёт стипендии выполнен\n";
+    #####:   65://            ScholarshipCalculation();
+    #####:   66://            break;
+        -:   67://        case 7:
+    #####:   68://            cout << "Печать ведомости выполнена\n";
+    #####:   69://            PrintStatement();
+    #####:   70://            break;
+        -:   71://        case 8:
+    #####:   72://            cout << "Вы вышли из программы\n";
+    #####:   73://            break;
+        -:   74://        }
+    #####:   75://        output();
+    #####:   76://    } while (request != 8);
+    #####:   77://    return 0;
+        -:   78://}
+        -:   79:
+        2:   80:void input()
+        -:   81:{
+        4:   82:    fstream fin;
+        2:   83:    fin.open("Students.txt");
+        2:   84:    if (!fin.good())
+    #####:   85:        fstream out("Students.txt");
+        4:   86:    string fio, groupnumber, educationform;
+        -:   87:    double averagescore;
+        -:   88:    int misshourse;
+        2:   89:    while (!fin.eof())
+        -:   90:    {
+        2:   91:        fin >> fio >> groupnumber >> averagescore >> misshourse >> educationform;
+        2:   92:        if (fio == "-1")
+        2:   93:            break;
+    #####:   94:        Students_list.push_back ({ fio, groupnumber, averagescore, misshourse, educationform });
+        -:   95:    }
+        2:   96:    fin.close();
+        2:   97:}
+        -:   98:
+    #####:   99:void OutputInformarionFromAllStudents()
+        -:  100:{   
+    #####:  101:    int k = 0;
+    #####:  102:    for (auto object : Students_list) {
+    #####:  103:        OutputInformarion(object);
+    #####:  104:        k++;
+        -:  105:    }
+    #####:  106:    if (k == 0)
+    #####:  107:        cout << "Список студентов пока что пуст :(\n";
+    #####:  108:    system("pause");
+    #####:  109:}
+        -:  110:
+    #####:  111:void OutputInformarion(Student& object)
+        -:  112:{
+    #####:  113:    cout << "\n";
+    #####:  114:    line();
+    #####:  115:    cout << "ФИО: " << object.FIO << "\n";
+    #####:  116:    cout << "Номер группы: " << object.GroupNumber << "\n";
+    #####:  117:    cout << "Средний балл: " << object.AverageScore << "\n";
+    #####:  118:    cout << "Количество пропущенных часов: " << object.MissHourse << "\n";
+    #####:  119:    cout << "Платная/Бюджетная форма обучения: " << object.EducationForm << " форма обучения" <<"\n";
+    #####:  120:    line();
+    #####:  121:}
+        -:  122:
+    #####:  123:void DeliteInformation()
+        -:  124:{
+    #####:  125:    string fio;
+        -:  126:    regex regularFIO("([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)");
+    #####:  127:    cout << "Введите ФИО студента, информацию которого хотите удалить: "; 
+    #####:  128:    cin >> fio;
+        -:  129:    while (true) {
+        -:  130:        if (!regex_match(fio, regularFIO)) {
+        -:  131:            cout << "Повторите попытку ввода:\n(Вместо пробела используйте нижнее подчеркивание, также можно использовать только русские буквы)\n";
+        -:  132:            cin >> fio;
+        -:  133:        }
+        -:  134:        else
+        -:  135:            break;
+        -:  136:    }
+    #####:  137:    for (int i = 0; i < Students_list.size(); i++) {
+    #####:  138:        if (Students_list[i].FIO == fio)
+        -:  139:        {
+    #####:  140:            Students_list.erase(Students_list.begin() + i);
+    #####:  141:            line();
+    #####:  142:            cout << "*Информация о данном студенте удалена*\n";
+    #####:  143:            line();
+    #####:  144:            break;
+        -:  145:        }
+        -:  146:        else
+    #####:  147:            cout << "Студент с таким ФИО не найден";
+        -:  148:    }
+    #####:  149:}
+        -:  150:
+    #####:  151:void AddInformation()
+        -:  152:{
+    #####:  153:    string fio, groupnumber, educationform;
+        -:  154:    double averagescore;
+        -:  155:    int misshourse;
+        -:  156:    regex regularFIO("([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)");
+        -:  157:    regex regularGroupNumber("([0-9]+)");    
+    #####:  158:    cout << "\nВведите ФИО: ";
+    #####:  159:    cin >> fio;
+        -:  160:    while (true) {
+        -:  161:        for (int i = 0; i < Students_list.size(); i++) {
+        -:  162:            if (Students_list[i].FIO == fio) {
+        -:  163:                cout << "Повторите попытку ввода:\n(Студент с таким ФИО уже занесён в базу данных)\n";
+        -:  164:                cin >> fio;
+        -:  165:            }
+        -:  166:        }
+        -:  167:        if (!regex_match(fio, regularFIO)) {
+        -:  168:            cout << "Повторите попытку ввода:\n(Вместо пробела используйте нижнее подчеркивание, также можно использовать только русские буквы)\n";
+        -:  169:            cin >> fio;
+        -:  170:            for (int i = 0; i < Students_list.size(); i++) {
+        -:  171:                if (Students_list[i].FIO == fio) {
+        -:  172:                    cout << "Повторите попытку ввода:\n(Студент с таким ФИО уже занесён в базу данных)\n";
+        -:  173:                    cin >> fio;
+        -:  174:                }
+        -:  175:            }
+        -:  176:        }
+        -:  177:        else if (true) {
+        -:  178:            for (int i = 0; i < Students_list.size(); i++) {
+        -:  179:                if (Students_list[i].FIO == fio) {
+        -:  180:                    cout << "Повторите попытку ввода:\n(Студент с таким ФИО уже занесён в базу данных)\n";
+        -:  181:                    cin >> fio;
+        -:  182:                    i = 0;
+        -:  183:                }
+        -:  184:                if (i + 1 == Students_list.size())
+        -:  185:                    break;
+        -:  186:            }
+        -:  187:            break;
+        -:  188:        }
+        -:  189:        else
+        -:  190:            break;
+        -:  191:    }
+    #####:  192:    cout << "\nВведите номер группы: ";
+    #####:  193:    cin >> groupnumber;
+        -:  194:    while (true) {
+        -:  195:        if (!regex_match(groupnumber, regularGroupNumber)) {
+        -:  196:            cout << "Повторите попытку ввода:\n(Можно использовать только цифры)\n";
+        -:  197:            cin >> groupnumber;
+        -:  198:        }
+        -:  199:        else if (groupnumber.length() < 6 || groupnumber.length() > 6) {
+        -:  200:            cout << "Повторите попытку ввода:\n(Можно использовать только 6 цифр)\n";
+        -:  201:            cin >> groupnumber;
+        -:  202:        }
+        -:  203:        else
+        -:  204:            break;
+        -:  205:    }
+    #####:  206:    cout << "\nВведите средний балл: ";
+    #####:  207:    cin >> averagescore;
+        -:  208:    while (true) {
+    #####:  209:        if (averagescore < 0 || averagescore > 10) {
+    #####:  210:            cout << "Повторите попытку ввода:\n(Вы ввели неверное число)\n";
+    #####:  211:            cin >> averagescore;
+        -:  212:        }
+        -:  213:        else
+        -:  214:            break;
+        -:  215:    }
+    #####:  216:    if (cin.fail()) {
+    #####:  217:        cout << "Программа завершена\n(Можно использовать только цифры)\n";
+    #####:  218:        return ;
+        -:  219:    }
+    #####:  220:    cout << "\nВведите количество пропущенных часов: ";
+    #####:  221:    cin >> misshourse;
+        -:  222:    while (true)
+        -:  223:    {
+    #####:  224:        if (misshourse < 0 || misshourse > 1000) {
+    #####:  225:            cout << "Повторите попытку ввода:\n(Вы ввели неверное количество пропусков)\n";
+    #####:  226:            cin >> misshourse;
+        -:  227:        }
+        -:  228:        else
+        -:  229:            break;
+        -:  230:    }
+    #####:  231:    if (cin.fail()) {
+    #####:  232:        cout << "Программа завершена\n(Можно использовать только цифры)\n";
+    #####:  233:        return;
+        -:  234:    }
+    #####:  235:    cout << "\nВыберите форму обучения (Платная/Бюджетная): ";
+    #####:  236:    cin >> educationform;
+        -:  237:    while (true) {
+    #####:  238:        if (educationform == "Платная" || educationform == "Бюджетная") {
+    #####:  239:            cout << "\n";
+    #####:  240:            break;
+        -:  241:        }
+        -:  242:        else {
+    #####:  243:            cout << "Повторите попытку ввода:\n(Можно вводить либо Платную форму(Платная) обучения, либо Бюджетную(Бюджетная))\n";
+    #####:  244:            cin >> educationform;
+        -:  245:        }
+        -:  246:    }
+    #####:  247:    Students_list.push_back({ fio, groupnumber, averagescore, misshourse, educationform });
+    #####:  248:    cout << "\n*Информация о студенте добавлена*\n";
+    #####:  249:    system("pause");
+        -:  250:}
+        -:  251:
+    #####:  252:void ChangeInformationAboutStudent() {
+    #####:  253:    string fio;
+    #####:  254:    int x = 0;
+        -:  255:    regex regularFIO("([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)");
+    #####:  256:    cout << "Введите ФИО студента, средний балл которого хотите изменить: ";
+    #####:  257:    cin >> fio;
+        -:  258:    while (true) {
+        -:  259:        if (!regex_match(fio, regularFIO)) {
+        -:  260:            cout << "Повторите попытку ввода:\n(Вместо пробела используйте нижнее подчеркивание, также можно использовать только русские буквы)\n";
+        -:  261:            cin >> fio;
+        -:  262:        }
+        -:  263:        else
+        -:  264:            break;
+        -:  265:    }
+        -:  266:    double averagescore;
+    #####:  267:    cout << "Введите средний балл на который хотите изменить: ";
+    #####:  268:    cin >> averagescore;
+        -:  269:    while (true) {
+    #####:  270:        if (averagescore < 0 || averagescore > 10) {
+    #####:  271:            cout << "Повторите попытку ввода:\n(Вы ввели неверное число)\n";
+    #####:  272:            cin >> averagescore;
+        -:  273:        }
+        -:  274:        else
+        -:  275:            break;
+        -:  276:    }
+    #####:  277:    if (cin.fail()) {
+    #####:  278:        cout << "Программа завершена\n(Можно использовать только цифры)\n";
+    #####:  279:        return;
+        -:  280:    }
+    #####:  281:    for (int i = 0; i < Students_list.size(); i++){
+    #####:  282:        if (Students_list[i].FIO == fio)
+        -:  283:        {
+    #####:  284:            Students_list.push_back({ Students_list[i].FIO, Students_list[i].GroupNumber, averagescore, Students_list[i].MissHourse, Students_list[i].EducationForm });
+    #####:  285:            Students_list.erase(Students_list.begin() + i);
+    #####:  286:            break;
+        -:  287:        }
+        -:  288:        else {
+    #####:  289:            cout << "По вашиму запросу не найдено ни одного студента";
+    #####:  290:            x = 1;
+        -:  291:        }
+        -:  292:    }
+    #####:  293:    if (x != 1) {
+    #####:  294:        line();
+    #####:  295:        cout << "*Средний балл студента изменен*";
+    #####:  296:        line();
+        -:  297:    }
+        -:  298:}
+        -:  299:
+    #####:  300:void PrintStatement() {
+    #####:  301:    int kol = 0, chek = 0;
+    #####:  302:    double sum = 0, a = 181, b = 135;
+    #####:  303:    line();
+    #####:  304:    for (int i = 0; i < Students_list.size(); i++) {
+    #####:  305:        if (Students_list[i].EducationForm == "Платная" || Students_list[i].MissHourse > 10 || Students_list[i].AverageScore < 5) {
+    #####:  306:            chek = 1;
+        -:  307:        }
+        -:  308:        else
+        -:  309:        {
+    #####:  310:            if (Students_list[i].AverageScore >= 5 && Students_list[i].AverageScore <= 10)
+    #####:  311:                kol++;
+        -:  312:        }
+        -:  313:    }
+    #####:  314:    cout << "Количество студентов, получивших стипендию: " << kol << "\n\n";
+    #####:  315:    cout << "Список студентов, получивших стипендию:\n";
+    #####:  316:    for (int i = 0; i < Students_list.size(); i++) {
+    #####:  317:        if (Students_list[i].EducationForm == "Платная" || Students_list[i].MissHourse > 10 || Students_list[i].AverageScore < 5) {
+    #####:  318:            chek = 1;
+        -:  319:        }
+        -:  320:        else
+        -:  321:        {
+    #####:  322:            if (Students_list[i].AverageScore >= 5 && Students_list[i].AverageScore < 6) {
+    #####:  323:                cout << Students_list[i].FIO << "\n";
+    #####:  324:                sum = sum + 78.862;
+        -:  325:            }
+    #####:  326:            if (Students_list[i].AverageScore >= 6 && Students_list[i].AverageScore < 8) {
+    #####:  327:                cout << Students_list[i].FIO << "\n";
+    #####:  328:                sum = sum + 94.634;
+        -:  329:            }
+    #####:  330:            if (Students_list[i].AverageScore >= 8 && Students_list[i].AverageScore < 9) {
+    #####:  331:                cout << Students_list[i].FIO << "\n";
+    #####:  332:                sum = sum + 110.405;
+        -:  333:            }
+    #####:  334:            if (Students_list[i].AverageScore >= 9 && Students_list[i].AverageScore <= 10) {
+    #####:  335:                cout << Students_list[i].FIO << "\n";
+    #####:  336:                sum = sum + 126.179;
+        -:  337:            }
+        -:  338:        }
+        -:  339:    }
+    #####:  340:    cout << "\nСписок студентов, получивших повышенную стипендию: \n";
+    #####:  341:    for (int i = 0; i < Students_list.size(); i++) {
+    #####:  342:        if (Students_list[i].EducationForm == "Платная" || Students_list[i].MissHourse > 10 || Students_list[i].AverageScore < 5) {
+    #####:  343:            chek = 1;
+        -:  344:        }
+        -:  345:        else
+        -:  346:        {
+    #####:  347:            if (Students_list[i].AverageScore >= 6 && Students_list[i].AverageScore <= 10)
+    #####:  348:                cout << Students_list[i].FIO << "\n";
+        -:  349:        }
+        -:  350:    }
+    #####:  351:    sum = ch * a + cah * b + sum;
+    #####:  352:    cout << "\nОбщее количество выплаченных денег составляет: " << sum << " руб." << "\n";
+    #####:  353:    line();
+    #####:  354:    system("pause");
+    #####:  355:}
+        -:  356:
+    #####:  357:void ScholarshipCalculation() {
+    #####:  358:    int chek = 0;
+    #####:  359:    line();
+    #####:  360:    for (int i = 0; i < Students_list.size(); i++) {
+    #####:  361:        if (Students_list[i].EducationForm == "Платная") {
+    #####:  362:            cout << Students_list[i].FIO << " не получает стипендию, так как у него Платная форма обучения\n\n";
+        -:  363:        }
+    #####:  364:        else if (Students_list[i].MissHourse > 10) {
+    #####:  365:            cout << Students_list[i].FIO << " не получает стипендию, так как у него более 10 часов пропусков\n\n";
+        -:  366:        }
+    #####:  367:        else if (Students_list[i].AverageScore < 5) {
+    #####:  368:            cout << Students_list[i].FIO << " не получает стипендию, так как у него низкий средний балл\n\n";
+        -:  369:        }
+        -:  370:        else
+        -:  371:        {
+    #####:  372:            if (Students_list[i].AverageScore >= 5 && Students_list[i].AverageScore < 6)
+    #####:  373:                cout << Students_list[i].FIO << " получает – 78,862 руб.\n\n";
+    #####:  374:            if (Students_list[i].AverageScore >= 6 && Students_list[i].AverageScore < 8)
+    #####:  375:                cout << Students_list[i].FIO << " получает – 94,634 руб.\n\n";
+    #####:  376:            if (Students_list[i].AverageScore >= 8 && Students_list[i].AverageScore < 9)
+    #####:  377:                cout << Students_list[i].FIO << " получает – 110,405 руб.\n\n";
+    #####:  378:            if (Students_list[i].AverageScore >= 9 && Students_list[i].AverageScore <= 10)
+    #####:  379:                cout << Students_list[i].FIO << " получает – 126,179 руб.\n\n";
+        -:  380:        }
+        -:  381:    }
+    #####:  382:    line();
+    #####:  383:    system("pause");
+    #####:  384:}
+        -:  385:
+    #####:  386:void AwardPersonalScholarship() {
+    #####:  387:    string fio;
+    #####:  388:    int chek = 0, pack = 0;
+        -:  389:    regex regularFIO("([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)");
+    #####:  390:    cout << "Введите ФИО студента, именную стипендию которому вы хотите начислить: \n";
+    #####:  391:    cin >> fio;
+        -:  392:    while (true) {
+        -:  393:        if (!regex_match(fio, regularFIO)) {
+        -:  394:            cout << "Повторите попытку ввода:\n(Вместо пробела используйте нижнее подчеркивание, также можно использовать только русские буквы)\n";
+        -:  395:            cin >> fio;
+        -:  396:        }
+        -:  397:        else
+        -:  398:            break;
+        -:  399:    }
+    #####:  400:    for (int i = 0; i < Students_list.size(); i++) {
+    #####:  401:        if (Students_list[i].FIO == fio) {
+    #####:  402:            if (Students_list[i].EducationForm == "Платная") {
+    #####:  403:                cout << Students_list[i].FIO << " не получает стипендию, так как у него платная форма обучения\n";
+    #####:  404:                pack = 1;
+    #####:  405:                chek = 1;
+        -:  406:            }
+    #####:  407:            else if (chek == 1 || Students_list[i].MissHourse > 10) {
+    #####:  408:                cout << Students_list[i].FIO << " не получает стипендию, так как у него более 10 часов пропусков\n";
+    #####:  409:                pack = 1;
+    #####:  410:                chek = 2;
+        -:  411:            }
+    #####:  412:            else if (chek == 1 || chek == 2 || Students_list[i].AverageScore < 5) {
+    #####:  413:                cout << Students_list[i].FIO << " не получает стипендию, так как у него низкий средний балл\n";
+    #####:  414:                pack = 1;
+        -:  415:                chek == 3;
+        -:  416:            }
+        -:  417:            else
+        -:  418:            {
+    #####:  419:                if (Students_list[i].AverageScore >= 8.5 && Students_list[i].AverageScore <= 10) {
+    #####:  420:                    cout << Students_list[i].FIO << " получает именную стипендию\n";
+    #####:  421:                    pack = 1;
+    #####:  422:                    ch++;
+        -:  423:                }
+        -:  424:                else {
+    #####:  425:                    cout << Students_list[i].FIO << " не получает именную стипендию, так как у него средний балл ниже чем полагается\n";
+    #####:  426:                    pack = 1;
+        -:  427:                }
+        -:  428:            }
+        -:  429:        }
+        -:  430:    }
+    #####:  431:    if (pack != 0) {
+    #####:  432:        cout << "Студент с таким ФИО не найден";
+        -:  433:    }
+    #####:  434:    system("pause");
+    #####:  435:}
+        -:  436:
+    #####:  437:void UniversityCouncilScholarship() {
+    #####:  438:    string fio;
+    #####:  439:    int chek = 0, pack = 0;
+        -:  440:    regex regularFIO("([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)(\_)([А-Яа-яЁё]+)");
+    #####:  441:    cout << "Введите ФИО студента, именную стипендию которому вы хотите начислить: \n";
+    #####:  442:    cin >> fio;
+        -:  443:    while (true) {
+        -:  444:        if (!regex_match(fio, regularFIO)) {
+        -:  445:            cout << "Повторите попытку ввода:\n(Вместо пробела используйте нижнее подчеркивание, также можно использовать только русские буквы)\n";
+        -:  446:            cin >> fio;
+        -:  447:        }
+        -:  448:        else
+        -:  449:            break;
+        -:  450:    }
+    #####:  451:    for (int i = 0; i < Students_list.size(); i++) {
+    #####:  452:        if (Students_list[i].FIO == fio) {
+    #####:  453:            if (Students_list[i].EducationForm == "Платная") {
+    #####:  454:                cout << Students_list[i].FIO << " не получает стипендию, так как у него платная форма обучения\n";
+    #####:  455:                pack = 1;
+    #####:  456:                chek = 1;
+        -:  457:            }
+    #####:  458:            else if (chek == 1 || Students_list[i].MissHourse > 10) {
+    #####:  459:                cout << Students_list[i].FIO << " не получает стипендию, так как у него более 10 часов пропусков\n";
+    #####:  460:                pack = 1;
+    #####:  461:                chek = 2;
+        -:  462:            }
+    #####:  463:            else if (chek == 1 || chek == 2 || Students_list[i].AverageScore < 5) {
+    #####:  464:                cout << Students_list[i].FIO << " не получает стипендию, так как у него низкий средний балл\n";
+    #####:  465:                pack = 1;
+        -:  466:                chek == 3;
+        -:  467:            }
+        -:  468:            else
+        -:  469:            {
+    #####:  470:                if (Students_list[i].AverageScore >= 8 && Students_list[i].AverageScore <= 10) {
+    #####:  471:                    cout << Students_list[i].FIO << " получает Стипендия Совета вуза\n";
+    #####:  472:                    pack = 1;
+    #####:  473:                    cah++;
+        -:  474:                }
+        -:  475:                else {
+    #####:  476:                    cout << Students_list[i].FIO << " не получает Стипендию Совета вуза, так как у него средний балл ниже чем полагается\n";
+    #####:  477:                    pack = 1;
+        -:  478:                }
+        -:  479:            }
+        -:  480:        }
+        -:  481:    }
+    #####:  482:    if(pack != 0)
+    #####:  483:        cout << "Студент с таким ФИО не найден";
+    #####:  484:    system("pause");
+    #####:  485:}
+        -:  486:
+    #####:  487:void line()
+        -:  488:{
+    #####:  489:    for (int i = 0; i < 50; i++)
+    #####:  490:        cout << '*';
+    #####:  491:    cout << endl;
+    #####:  492:}
+        -:  493:
+        2:  494:void output()
+        -:  495:{
+        4:  496:    ofstream fout("Students.txt");
+        2:  497:    for (auto object : Students_list)
+    #####:  498:        fout << object.FIO << " " << object.GroupNumber << " " << object.AverageScore << " " << object.MissHourse << " " << object.EducationForm << endl;
+        2:  499:    fout << -1;
+        2:  500:    fout.close();
+        8:  501:}
