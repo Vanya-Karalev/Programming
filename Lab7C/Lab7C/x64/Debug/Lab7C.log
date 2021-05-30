@@ -1,0 +1,4 @@
+﻿  Test.c
+  LINK : не найден или не выполнена сборка D:\C++ C C#\C\Labs-C-main\Lab7C\x64\Debug\Lab7C.exe при последней инкрементной компоновке; выполняется полная компоновка
+Test.obj : error LNK2005: main уже определен в Source.obj
+D:\C++ C C#\C\Labs-C-main\Lab7C\x64\Debug\Lab7C.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
